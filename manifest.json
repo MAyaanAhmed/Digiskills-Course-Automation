@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Digiskills Course Automation",
+  "version": "2.0",
+  "description": "DCA (Digiskills Course Automation) automatically switches to the next lesson video when the current video's completion status is completed!",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [{
+    "matches": ["https://lms.digiskills.pk/CourseTopicDetail.aspx"],
+    "js": ["automation.js"]
+  }],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "icon128.png"
+  }
+}
